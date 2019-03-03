@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dishs>
+  <Dish>
+    <DishName>鸡杂面</DishName>
+    <Categroy>面条</Categroy>
+    <Evaluate>鸡杂不错</Evaluate>
+    <Score>4.1</Score>
+  </Dish>
+  <Dish>
+    <DishName>燃面</DishName>
+    <Categroy>面条</Categroy>
+    <Evaluate>就是脆肉面</Evaluate>
+    <Score>4.4</Score>
+  </Dish>
+<Dish>
+    <DishName>重庆小面</DishName>
+    <Categroy>面条</Categroy>
+    <Evaluate>不好吃</Evaluate>
+    <Score>3.1</Score>
+  </Dish>
+<Dish>
+    <DishName>鸡丝骨汤面</DishName>
+    <Categroy>面条</Categroy>
+    <Evaluate>鸡丝比较多</Evaluate>
+    <Score>4.5</Score>
+  </Dish>
+<Dish>
+    <DishName>酸豆角面</DishName>
+    <Categroy>面条</Categroy>
+    <Evaluate>酸豆角不正宗</Evaluate>
+    <Score>4.2</Score>
+  </Dish>
+<Dish>
+    <DishName>牛肉面</DishName>
+    <Categroy>面条</Categroy>
+    <Evaluate>差评</Evaluate>
+    <Score>3.0</Score>
+  </Dish>
+<Dish>
+    <DishName>酸辣苕粉</DishName>
+    <Categroy>粉</Categroy>
+    <Evaluate>价格贵</Evaluate>
+    <Score>4.8</Score>
+  </Dish>
+
+</Dishs>

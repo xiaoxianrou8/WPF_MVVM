@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantMVVM", "RestaurantMVVM\RestaurantMVVM.csproj", "{6EF07840-E09E-4949-BBBA-872EB208EC35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EF07840-E09E-4949-BBBA-872EB208EC35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF07840-E09E-4949-BBBA-872EB208EC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF07840-E09E-4949-BBBA-872EB208EC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF07840-E09E-4949-BBBA-872EB208EC35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+		SolutionGuid = {4489C0B7-7770-467E-8D11-FCC2C17776D4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,57 @@
+﻿<Window x:Class="RestaurantMVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantMVVM"
+        mc:Ignorable="d"
+        Title="{Binding Path=Restaurant.Name,StringFormat=\{0\}-在线订餐}" Height="800" Width="1200">
+    <Grid Background="#FFA3FF4A">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#FFFF1B1B" Margin="3" BorderThickness="3" CornerRadius="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding Path=Restaurant.Name}"  FontSize="70" FontFamily="迷你简漫步">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect>  
+                </TextBlock>
+                <TextBlock Grid.Row="1" Text="{Binding Path=Restaurant.Address}"/>
+                <TextBlock Grid.Row="2" Text="{Binding Path=Restaurant.Tel}"/>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1">
+            <DataGrid AutoGenerateColumns="False" GridLinesVisibility="None" CanUserAddRows="False"
+                      CanUserDeleteRows="False" Margin="2" FontSize="16" ItemsSource="{Binding DishMenu}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="菜名" Binding="{Binding Dish.Name}" Width="120"/>
+                    <DataGridTextColumn Header="分类" Binding="{Binding Dish.Categroy}" Width="120"/>
+                    <DataGridTextColumn Header="评价" Binding="{Binding Dish.Evaluate}" Width="120"/>
+                    <DataGridTextColumn Header="评分" Binding="{Binding Dish.Score}" Width="120"/>
+                    <DataGridTemplateColumn Header="选中">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=IsChecked,UpdateSourceTrigger=PropertyChanged}"
+                                          VerticalAlignment="Center" HorizontalAlignment="Center"
+                                          Command="{Binding Path=DataContext.SelectItemCMD,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type Window}}}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <TextBlock Text="共计：" FontSize="16" Height="18"/>
+            <TextBox Height="16" Width="100" Text="{Binding Count}"/>
+            <Button Height="16" Width="50" Margin="8 0 0 0" Content="预定" Command="{Binding OrderCMD}"/>
+        </StackPanel>
+    </Grid>
+</Window>
